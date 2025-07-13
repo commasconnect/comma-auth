@@ -183,13 +183,25 @@ async def logout(credentials: HTTPAuthorizationCredentials = Depends(security)):
 
 # Future endpoints for Apple ID and Microsoft
 @app.get("/auth/apple")
-async def apple_login():
+async def apple_login(redirect_url: str = None):
     """Apple Sign-In (coming soon)"""
+    # from .auth.apple import AppleAuthProvider
+    # apple_auth = AppleAuthProvider()
+    # state = str(uuid.uuid4())
+    # auth_states[state] = AuthState(provider="apple", redirect_url=redirect_url)
+    # authorization_url = apple_auth.get_authorization_url(state)
+    # return {"authorization_url": authorization_url, "state": state}
     raise HTTPException(status_code=501, detail="Apple Sign-In coming soon")
 
 @app.get("/auth/microsoft") 
-async def microsoft_login():
+async def microsoft_login(redirect_url: str = None):
     """Microsoft OAuth (coming soon)"""
+    # from .auth.microsoft import MicrosoftAuthProvider
+    # microsoft_auth = MicrosoftAuthProvider()
+    # state = str(uuid.uuid4())
+    # auth_states[state] = AuthState(provider="microsoft", redirect_url=redirect_url)
+    # authorization_url = microsoft_auth.get_authorization_url(state)
+    # return {"authorization_url": authorization_url, "state": state}
     raise HTTPException(status_code=501, detail="Microsoft OAuth coming soon")
 
 if __name__ == "__main__":
