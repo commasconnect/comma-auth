@@ -14,8 +14,8 @@ A centralized authentication service providing "Sign in with comma" across all C
 
 - comma.cm (main site)
 - docs.comma.cm
-- app.comma.cm  
-- storybook.comma.cm
+- b.comma.cm  
+- sb.comma.cm
 - Future: nonprofit expansions
 
 ## Architecture
